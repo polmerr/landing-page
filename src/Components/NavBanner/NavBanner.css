@@ -1,0 +1,169 @@
+.wrapper{
+    position: relative;
+    display: flex;
+}
+
+.banner-bg{
+   
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+
+.banner-content{
+    background-size: cover;
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    color:white;
+    padding:7%;
+}
+
+.nav{
+    font-family: 'Barlow';
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    letter-spacing: 1.2px;
+    margin-bottom: 25%;
+}
+
+.nav-items{
+    display: none;
+}
+.triangle{
+    position: absolute; 
+    top:-50px;
+    right: 0;
+    width: 0; 
+  height: 0; 
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent; 
+  
+  border-right:50px solid white; 
+}
+
+.burger{
+    margin-right: 5%;
+}
+
+.mobile-menu{
+    display: flex;
+    align-items: center;
+    top:56%;
+    right:50%;
+    max-width: 75%;
+    transform: translate(50%, -50%);
+    flex-direction: column;
+    gap: 25px;
+    position: absolute;
+    background-color: white;
+    padding:40px 25%;
+    z-index: 1;
+    display: none;
+}
+
+.mobile-menu.showMenu{
+    display: flex;
+}
+
+.mobile-menu h2{
+    color:hsl(210, 4%, 67%);
+    font-family: "Barlow";
+    cursor: pointer;
+}
+.mobile-menu button{
+    padding:20px 35px;
+    border-radius: 30px;
+    background-color: hsl(51, 100%, 49%);
+    outline:none;
+    border: none;
+    font-weight: 900;
+    font-size: 20px;
+    font-family: 'Fraunces';
+    cursor: pointer;
+}
+
+.title{
+    font-family: "Fraunces";
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 6px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:50px;
+}
+
+.desktop{
+    display: none;
+}
+
+@media (min-width:460px) {
+    
+}
+
+@media (min-width:750px){
+    .mobile-menu.showMenu{
+        display: none;
+    }
+
+    .desktop{
+        display: block;
+    }
+    .mobile{
+        display: none;
+    }
+    .nav{
+        margin-bottom: 40px;
+        align-items: center ;
+    }
+    .nav-items{
+        display: flex;
+        gap:25px;
+        font-size: 15px;
+        font-weight: 100;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+    .nav-items button{
+        padding:10px 20px;
+        border-radius: 15px;
+        cursor: pointer;
+        font-family: 'Frauces';
+        font-size: 16px;
+        font-weight: 600;
+        border: none;
+        box-shadow: 2px 3px 7px 0px rgba(0,0,0,0.1);
+    }
+    .nav-items button:focus{
+        border: none;
+        outline: none;
+    }
+    .nav-items button:hover{
+        background-color: rgba(255,255,255,0.4);
+        color:white;
+    }
+    .burger{
+        display: none;
+    }
+    .banner-bg{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+        max-height: 550px;
+    }
+    .banner-content{
+        padding:45px 60px
+    }
+
+    .arrow{
+        height: 90px;
+    }
+}
